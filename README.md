@@ -1,20 +1,14 @@
-# Rapid-ChatXChannels
+# Django Chat 
 A rapid fire tutorial and introduction of Django Channels. To get more in-depth check out the full course https://kirr.co/badl8e
 
-
-YouTube Video: __coming soon__
+Youtube: https://www.youtube.com/watch?v=RVH05S1qab8
 
 
 
 ### Recommended Start
 ```bash
 
-$ cd path/to/your/dev/folder
-$ mkdir channels-rapid
-$ cd channels-rapid
-$ git clone https://github.com/codingforentrepreneurs/Rapid-ChatXChannels .
-$ git reset a9a2c42052c87fd2eb5acdc417729f9359a1e087 --hard
-$ git remote remove origin
+$ git clone https://github.com/Juan-Bogota/Django-Chat.git
 $ virtualenv -p python3 .
 $ source bin/activate
 (channels-rapid) $ pip install -r requirements.txt
@@ -26,27 +20,29 @@ $ source bin/activate
 ... create second super user 
 ```
 
+### Optional install
+```
+pip install channels==2.1.2
+pip install pathlib
+pip install -U asgiref
+```
+
+
 
 ### Install Redis
 1. Download Redis
-    - Using [Homebrew](http://brew.sh):
+    
         ```
-        brew install redis
-
-        brew services start redis
+        pip3 install channels_redis
+        
         ```
-        Brew permission errors? Try `sudo chown -R "$USER":admin /usr/local`
+        permission errors? Try `sudo chown -R "$USER":admin /usr/local`
 
     - Direct [Download](http://redis.io/download)
 
 2. Open & Test Redis:
     - open Terminal
 
-    - **redis-cli ping**
-        ```
-        $ redis-cli ping
-        PONG
-        ```
 
     - **redis-server**
         ```
@@ -74,5 +70,11 @@ $ source bin/activate
         86750:M 08 Nov 08:17:21.434 # Server started, Redis version 3.2.5
         86750:M 08 Nov 08:17:21.434 * The server is now ready to accept connections on port 6379
 
+        ```
+        
+    - **redis-cli ping**
+        ```
+        $ redis-cli ping
+        PONG
         ```
         **Close Redis** with `control` + `c` to quit
