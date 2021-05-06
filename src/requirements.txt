@@ -34,7 +34,7 @@ djangorestframework==3.9.0
 Fabric3==1.14.post1
 flasgger==0.9.4
 Flask==1.1.2
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 gunicorn==19.7.1
 hiredis==1.0.1
 html5lib==0.999999999
